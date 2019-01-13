@@ -1,0 +1,173 @@
+html, body {
+  font-size: 14px;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+#header_logo  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+
+.navbar-header  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+@media only screen and (max-width:700px) {
+
+  .panda_logo img   {
+    width: 90%;
+  }
+}
+
+.navbar   {
+  margin-bottom: 0%;
+}
+
+.navbar-header h1   {
+  font-family: 'Aclonica', sans-serif;
+  font-style: oblique;
+  color: red;
+  font-weight: bold;
+  font-size: 44px;
+}
+
+.navbar-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#nav-about {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+/* main menu */
+
+.menu {
+  text-align: center;
+}
+
+.menu h1 {
+  font-family: 'Aclonica', sans-serif;
+  color: #284B7E;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: cyan;
+}
+
+@media only screen and (max-width:700px)  {
+  .navbar-header h1   {
+    font-size: 36px;
+  }
+  .menu h1  {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 30px;
+  }
+}
+
+.main_menu_image {
+  width: 30%;
+
+}
+
+#main-Menu  {
+  margin-bottom: 20px;
+}
+
+/*--  .main_menu_image  {
+  width: 30%;
+}
+--*/
+
+.main_menu_image img  {
+  width: 100%;
+  height: 220px;
+  padding: 5px;
+  border: 5px solid gray;
+}
+
+.item h3  {
+  color:#284B7E;
+  font-family: 'Aclonica', sans-serif;
+}
+
+.item p   {
+  color: #803315;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-family: 'Aclonica', sans-serif;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .main_menu_image  {
+    width: 100%;
+    height: inherit;
+  }
+  .main_menu_image  {
+    width: 100%;
+  }
+}
+
+/*-- Order Details --*/
+
+#total_order, #payment {
+  text-align:center;
+  font-family: 'Aclonica', sans-serif;
+}
+
+.order  {
+  color: dimgray;
+}
+
+@media only screen and (max-width:600px)  {
+  #total_order, #payment  {
+    text-align: justify;
+  }
+}
+
+/*-- Payment Detail --*/
+
+.submit   {
+  margin-bottom: 20px;
+}
+
+/*-- Footer--*/
+
+footer  {
+  background-color: #009999;
+}
+
+.icon {
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer a {
+  font-size: 36px;
+  color: black;
+  padding: 0 15px;
+}
+
+.copy   {
+  text-align: center;
+  padding-bottom: 15px;
+}
