@@ -121,6 +121,10 @@ html, body {
 }
 
 /*-- Order Details --*/
+.payment h1   {
+  font-family: 'Aclonica', sans-serif;
+  color: #284B7E;
+}
 
 #total_order, #payment {
   text-align:center;
@@ -141,7 +145,7 @@ html, body {
 }
 
 @media only screen and (max-width:600px)  {
-  #total_order, #payment  {
+  #total_order, #payment {
     text-align: justify;
   }
 }
