@@ -179,19 +179,30 @@ padding-bottom: 10px;
   height: 40px;
 }
 
+#mobile-link  {
+  text-align: center;
+  display: none;
+}
+
 .mobile-link a  {
   padding: 10px 20px;
   color: black;
   font-size: 17px;
   font-weight: bold;
   font-family: 'Aclonica', sans-serif;
-  display:none;
+
+}
+@media only screen and (max-width: 500px) {
+  .mobile-link a {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-  .mobile-link a {
-    display: inline-flex;
-    align-items: center;
+  #mobile-link {
+    display: flex;
+    text-align: center;
     flex-direction: row;
     justify-content: center;
   }

@@ -12,7 +12,7 @@ document.getElementById('cart-food').addEventListener('submit', function(event){
         sd3 = parseInt(document.getElementById('txt-q-kc').value, 10) || 0;
 
 
-  var totalMain = (md1 * 9.95) + (md2 * 10.95) + (md3 * 9.95) + (md4 * 14.95) + (md5 * 11.95) + (md6 * 10.95);
+  var totalMain = (md1 * 9.95) + (md2 * 10.95) + (md3 * 9.95) + (md4 * 14.95) + (md5 * 10.95) + (md6 * 10.95);
 
   var totalSide = (sd1 * 2) + (sd2 * 3) + (sd3 * 3);
 
