@@ -36,6 +36,6 @@ document.getElementById('cart-food').addEventListener('submit', function(event){
 
 document.getElementById('cart-payment').addEventListener('submit', function(event){
   event.preventDefault();
-  alert("Your order will be ready in 30 mins!");
+  alert("Your order will be ready in 30 mins!!");
 
 });
