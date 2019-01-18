@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lazy Panda Contact</title>
+    <link rel="stylesheet" href="./resources/css/reset.css">
+
+    <link rel="stylesheet" href="./resources/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+     <link rel="stylesheet"    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style>
+      body {background-color: powderBlue; margin-top: 40px; text-align: center;}
+
+      .first_line {
+        padding-top: 30px;
+      }
+
+      #my-map {
+        width: 500px;
+        height: 400px;
+        margin: 1em auto;
+      }
+
+      h4 a  {text-decoration: underline;}
+
+      @media only screen and (max-width: 700px) {
+        .panda_logo img {
+          width:80%;
+        }
+        .first_line {
+          padding-top: 0;
+        }
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid" id="header_logo">
+        <div class="navbar-header">
+          <div class="panda_logo">
+            <img src="./resources/images/lazy_panda_small.jpg" alt="panda">
+          </div>
+          <h1>Lazy Panda Takeout</h1>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="Contact">
+        <h3 class=first_line>We take great pride in our timely and professional customer service, and are happy to answer any questions you have by email or over the phone.</h3>
+        <h3>Lazy Panda Takeout</h3>
+        <h4>5510 15th Ave NE, Seattle, WA 98125</h4>
+        <h4>206-555-2222</h4>
+      </div>
+      <h4>info@lazypandatakeout.com</h4>
+      <h4><a href="index.html">HOME</a>
+      </h4>
+      <div id="my-map">
+
+      </div>
+    </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLhqonqjmpkq29v6vmjTbiqbyCcHxPTis&callback=initMap"
+type="text/javascript"></script>
+
+  <script>
+    'use strict';
+    document.addEventListener('DOMContentLoaded', drawMap);
+
+    var map;
+    function drawMap()  {
+
+    var storeLocation = new google.maps.LatLng(47.686690, -122.312170);
+
+    var mapOptions = {
+      'center' : storeLocation,
+      'zoom' : 12,
+      'mapTypeID': google.maps.MapTypeId.ROADMAP
+      };
+    map= new google.maps.Map(document.getElementById('my-map'), mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: storeLocation,
+      map: map,
+      title: 'We are here!'
+    });
+    var popUpContent = 'Lazy Panda Takeout<br >';
+        popUpContent += '5510 15th Ave NE<br />';
+        popUpContent += 'Seattle, WA';
+    var infowindow = new google.maps.InfoWindow({
+        content: popUpContent,
+        maxwidth: 270
+      })
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+    })
+    }
+
+  </script>
+
+  </body>
+</html>
